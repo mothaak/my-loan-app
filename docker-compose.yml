@@ -1,0 +1,16 @@
+version: '3'
+services:
+ backend:
+   build:
+     context: ./backend
+     dockerfile: Dockerfile
+   image: python-app
+   ports:
+     - "0.0.0.0:3300:3300"
+ frontend:
+   build:
+     context: ./frontend
+     dockerfile: Dockerfile
+   image: react-app
+   ports:
+     - "3000:3000"
